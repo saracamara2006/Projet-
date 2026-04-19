@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Événements — EventSphere</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Event<span>Sphere</span></div>
+  <nav class="nav" id="nav">
+    <a href="index.html">Accueil</a>
+    <a href="events.html" class="active">Événements</a>
+    <a href="event-details.html">Détail</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Tous les <span>événements</span></h1>
+    <p>Découvrez notre sélection de plus de 200 événements partout en France</p>
+  </div>
+</div>
+
+<section class="section events-page">
+  <div class="container">
+    <div class="filters-bar">
+      <div class="filters-left">
+        <select class="filter-select" id="filterCat">
+          <option value="">Toutes catégories</option>
+          <option value="tech">Tech & IA</option>
+          <option value="musique">Musique</option>
+          <option value="formation">Formation</option>
+          <option value="sport">Sport</option>
+          <option value="art">Art & Culture</option>
+          <option value="business">Business</option>
+        </select>
+        <select class="filter-select" id="filterDate">
+          <option value="">Toutes dates</option>
+          <option value="this-week">Cette semaine</option>
+          <option value="this-month">Ce mois</option>
+          <option value="next-month">Mois prochain</option>
+        </select>
+        <select class="filter-select" id="filterPrice">
+          <option value="">Tous prix</option>
+          <option value="free">Gratuit</option>
+          <option value="paid">Payant</option>
+        </select>
+      </div>
+      <div class="filters-right">
+        <input type="search" class="filter-search" placeholder="🔍 Rechercher..." id="searchInput">
+      </div>
+    </div>
+
+    <p class="results-count" id="resultsCount">6 événements trouvés</p>
+
+    <div class="event-grid" id="eventsGrid">
+      <div class="card" data-cat="tech" data-price="paid" onclick="location.href='event-details.html'">
+        <div class="card-img" style="background:#ff6b35;"></div>
+        <div class="card-body">
+          <span class="tag">Tech</span>
+          <h3>AI & Future Summit</h3>
+          <p>Les leaders de l'IA se réunissent pour discuter des tendances de demain.</p>
+          <div class="card-meta">
+            <span>📅 15 Mai 2026</span>
+            <span>📍 Paris</span>
+          </div>
+          <div class="card-footer">
+            <strong class="price">€149</strong>
+            <a href="event-details.html" class="btn btn-sm">Voir →</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-cat="musique" data-price="paid" onclick="location.href='event-details.html'">
+        <div class="card-img" style="background:#7c3aed;"></div>
+        <div class="card-body">
+          <span class="tag">Musique</span>
+          <h3>Jazz Under The Stars</h3>
+          <p>Une nuit magique sous les étoiles avec les meilleurs jazzmen européens.</p>
+          <div class="card-meta">
+            <span>📅 22 Juin 2026</span>
+            <span>📍 Lyon</span>
+          </div>
+          <div class="card-footer">
+            <strong class="price">€45</strong>
+            <a href="event-details.html" class="btn btn-sm">Voir →</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-cat="formation" data-price="paid" onclick="location.href='event-details.html'">
+        <div class="card-img" style="background:#059669;"></div>
+        <div class="card-body">
+          <span class="tag">Formation</span>
+          <h3>UX Design Masterclass</h3>
+          <p>Maîtrisez les outils et méthodes du design centré utilisateur.</p>
+          <div class="card-meta">
+            <span>📅 1 Juil 2026</span>
+            <span>📍 Remote</span>
+          </div>
+          <div class="card-footer">
+            <strong class="price">€89</strong>
+            <a href="event-details.html" class="btn btn-sm">Voir →</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-cat="art" data-price="paid" onclick="location.href='event-details.html'">
+        <div class="card-img" style="background:#dc2626;"></div>
+        <div class="card-body">
+          <span class="tag">Art</span>
+          <h3>Photographie Urbaine</h3>
+          <p>Explorez la ville avec un photographe professionnel et affinez votre œil.</p>
+          <div class="card-meta">
+            <span>📅 10 Juil 2026</span>
+            <span>📍 Marseille</span>
+          </div>
+          <div class="card-footer">
+            <strong class="price">€65</strong>
+            <a href="event-details.html" class="btn btn-sm">Voir →</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-cat="business" data-price="paid" onclick="location.href='event-details.html'">
+        <div class="card-img" style="background:#0284c7;"></div>
+        <div class="card-body">
+          <span class="tag">Business</span>
+          <h3>Startup Nation 2026</h3>
+          <p>Rencontrez les investisseurs et entrepreneurs qui façonnent l'économie.</p>
+          <div class="card-meta">
+            <span>📅 18 Août 2026</span>
+            <span>📍 Bordeaux</span>
+          </div>
+          <div class="card-footer">
+            <strong class="price">€199</strong>
+            <a href="event-details.html" class="btn btn-sm">Voir →</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-cat="sport" data-price="paid" onclick="location.href='event-details.html'">
+        <div class="card-img" style="background:#d97706;"></div>
+        <div class="card-body">
+          <span class="tag">Sport</span>
+          <h3>Trail des Alpes</h3>
+          <p>Un défi sportif unique à travers les plus beaux paysages alpins.</p>
+          <div class="card-meta">
+            <span>📅 5 Sept 2026</span>
+            <span>📍 Grenoble</span>
+          </div>
+          <div class="card-footer">
+            <strong class="price">€35</strong>
+            <a href="event-details.html" class="btn btn-sm">Voir →</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-cat="tech" data-price="free" onclick="location.href='event-details.html'">
+        <div class="card-img" style="background:#0f172a;"></div>
+        <div class="card-body">
+          <span class="tag">Tech</span>
+          <h3>Open Source Meetup</h3>
+          <p>Rejoignez la communauté open source pour partager et apprendre ensemble.</p>
+          <div class="card-meta">
+            <span>📅 20 Sept 2026</span>
+            <span>📍 Nantes</span>
+          </div>
+          <div class="card-footer">
+            <strong class="price free-price">Gratuit</strong>
+            <a href="event-details.html" class="btn btn-sm">Voir →</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-cat="musique" data-price="free" onclick="location.href='event-details.html'">
+        <div class="card-img" style="background:#be185d;"></div>
+        <div class="card-body">
+          <span class="tag">Musique</span>
+          <h3>Fête de la Musique</h3>
+          <p>Célébrez la musique dans les rues avec des centaines d'artistes locaux.</p>
+          <div class="card-meta">
+            <span>📅 21 Juin 2026</span>
+            <span>📍 Partout en France</span>
+          </div>
+          <div class="card-footer">
+            <strong class="price free-price">Gratuit</strong>
+            <a href="event-details.html" class="btn btn-sm">Voir →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no-results" id="noResults" style="display:none;">
+      <p>😕 Aucun événement ne correspond à votre recherche.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">Event<span>Sphere</span></div>
+      <p>La plateforme de référence pour découvrir et vivre les meilleurs événements.</p>
+    </div>
+    <div class="footer-links">
+      <strong>Navigation</strong>
+      <a href="index.html">Accueil</a>
+      <a href="events.html">Événements</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-links">
+      <strong>Légal</strong>
+      <a href="#">Mentions légales</a>
+      <a href="#">Confidentialité</a>
+      <a href="#">CGU</a>
+    </div>
+    <div class="footer-links">
+      <strong>Suivez-nous</strong>
+      <a href="#">Twitter / X</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 EventSphere — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

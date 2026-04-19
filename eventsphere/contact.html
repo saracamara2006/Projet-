@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact — EventSphere</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Event<span>Sphere</span></div>
+  <nav class="nav" id="nav">
+    <a href="index.html">Accueil</a>
+    <a href="events.html">Événements</a>
+    <a href="event-details.html">Détail</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <h1>Contact & <span>Inscription</span></h1>
+    <p>Une question ? Envie de vous inscrire ? On vous répond sous 24h.</p>
+  </div>
+</div>
+
+<section class="section contact-section">
+  <div class="container contact-grid">
+    <div class="contact-form-col">
+      <div class="card">
+        <h2>Nous contacter</h2>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Prénom *</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Alice" required>
+              <span class="field-error" id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Nom *</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Martin" required>
+              <span class="field-error" id="lastNameError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="alice@exemple.fr" required>
+            <span class="field-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet *</label>
+            <select id="subject" name="subject" required>
+              <option value="">Choisir un sujet</option>
+              <option value="inscription">Inscription à un événement</option>
+              <option value="info">Demande d'information</option>
+              <option value="partenariat">Partenariat / Sponsoring</option>
+              <option value="autre">Autre</option>
+            </select>
+            <span class="field-error" id="subjectError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="event">Événement concerné</label>
+            <select id="event" name="event">
+              <option value="">Sélectionner un événement</option>
+              <option value="ai-summit">AI & Future Summit</option>
+              <option value="jazz">Jazz Under The Stars</option>
+              <option value="ux">UX Design Masterclass</option>
+              <option value="photo">Photographie Urbaine</option>
+              <option value="startup">Startup Nation 2026</option>
+              <option value="trail">Trail des Alpes</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre demande..." required></textarea>
+            <span class="field-error" id="messageError"></span>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <span>Je souhaite recevoir la newsletter EventSphere</span>
+            </label>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="terms" name="terms" required>
+              <span>J'accepte les <a href="#">conditions générales d'utilisation</a> *</span>
+            </label>
+            <span class="field-error" id="termsError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">Envoyer le message</button>
+        </form>
+
+        <div class="success-message" id="successMsg" style="display:none;">
+          <div class="success-icon">✅</div>
+          <h3>Message envoyé !</h3>
+          <p>Merci pour votre message. Notre équipe vous répondra dans les 24 heures.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-info-col">
+      <div class="card contact-info-card">
+        <h3>Informations de contact</h3>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <span class="ci-icon">📧</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:contact@eventsphere.fr">contact@eventsphere.fr</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">📞</span>
+            <div>
+              <strong>Téléphone</strong>
+              <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">📍</span>
+            <div>
+              <strong>Adresse</strong>
+              <span>12 rue de l'Innovation<br>75001 Paris, France</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="ci-icon">🕐</span>
+            <div>
+              <strong>Horaires</strong>
+              <span>Lun — Ven : 9h — 18h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card contact-info-card">
+        <h3>FAQ rapide</h3>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">Comment puis-je annuler mon inscription ?</button>
+            <div class="faq-a">Vous pouvez annuler jusqu'à 7 jours avant l'événement pour un remboursement complet.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">Les événements sont-ils accessibles aux PMR ?</button>
+            <div class="faq-a">Oui, tous nos lieux partenaires sont accessibles aux personnes à mobilité réduite.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">Puis-je transférer mon billet ?</button>
+            <div class="faq-a">Oui, les billets sont transférables jusqu'à 48h avant l'événement depuis votre espace personnel.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">Event<span>Sphere</span></div>
+      <p>La plateforme de référence pour découvrir et vivre les meilleurs événements.</p>
+    </div>
+    <div class="footer-links">
+      <strong>Navigation</strong>
+      <a href="index.html">Accueil</a>
+      <a href="events.html">Événements</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-links">
+      <strong>Légal</strong>
+      <a href="#">Mentions légales</a>
+      <a href="#">Confidentialité</a>
+      <a href="#">CGU</a>
+    </div>
+    <div class="footer-links">
+      <strong>Suivez-nous</strong>
+      <a href="#">Twitter / X</a>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 EventSphere — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
